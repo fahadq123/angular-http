@@ -43,7 +43,8 @@ export class PostService {
         'customized-header': 'hello'
       }),
       params: new HttpParams().set('print', 'pretty'),
-      observe: "body"
+      observe: "body",
+      responseType: "json"
     })
       .pipe(map((responseData) => {
         const postsArray: PostModel[] = [];
